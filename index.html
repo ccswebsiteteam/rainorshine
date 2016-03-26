@@ -1,0 +1,292 @@
+<html>
+<head>	
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/pikaday.css">
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
+	<script src='js/parallax.js'></script>
+	<script src='js/pikaday.js'></script>
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script> -->
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
+	<style>
+		.form-progress {
+		    max-width: 290px;
+		    margin: 0 auto;
+		    margin-bottom: 20px;
+		}
+		.fill-button {
+		    position: absolute;
+		    width: 203px;
+		    height: 10px;
+		    background: #905487;
+		    left: 120%;
+		    top: 177px;
+		}
+		.progress-button-mask {
+		    display: inline-block;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    width: 0%;
+		    bottom: 0;
+		    background: #905487;
+		}
+		.progress-button a{
+			color: #905487;
+			display: inline-block;
+			padding: 14px 0;
+			position: relative;
+			z-index: 1;
+		}
+		.progress-button{
+			background: #EEEEEE;
+			color: #fff;
+			font-size: 25px;
+			width: 54px;
+			height: 54px;
+			overflow: hidden;
+			border-radius: 50%;
+			position: relative;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<section class="header">	
+		<div class="container">
+			<div class="menu_header fix-height">
+				<a href="#" class="logo"></a>
+				<ul class="menu_list menu_list_menu pull-left">
+					<li class="boxed skew-right active"><a href="#">Home</a></li>
+					<li class="boxed skew-right"><a href="#">About</a></li>
+					<li class="boxed skew-right"><a href="#">Special Offers</a></li>
+					<li class="boxed skew-right"><a href="#">Cars</a></li>
+					<li class="boxed skew-right"><a href="reservations.html">Reservations</a></li>
+					<li class="boxed skew-right"><a href="#">Location</a></li>
+				</ul>
+				<ul class="menu_list pull-right">
+					<li class="no-box"><a href="#">0202-10203</a></li>
+					<li class="boxed no-border pl-24 long-box bg-blue relative"><a href="#" class="bg-blue align-left">Contact Us</a>
+						<div class="scroll-down">
+							<a href="#complements" class="animate"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="banner">
+
+		<div class="container relative zindex2">
+			<h1 class="center color-white">Rent a Car in few seconds</h1>	
+<!-- 			<div class="preload-container">
+				<div class="preload-rotate preloader-img1">
+					<img src="img/couple.svg">
+				</div>
+				<div class="preload-rotate preloader-img2">
+					<img src="img/suv.svg">
+				</div>
+				<div class="preload-rotate preloader-img3">
+					<img src="img/pickup.svg">
+				</div>
+			</div> -->
+			<div class="form-progress center">
+				<span class="fill-button"></span>
+			    <div class="progress-button pull-left">
+			    	<a href="#"><span class="icon-location"></span></a>
+			    	<span class="progress-button-mask"></span>
+			   	</div>
+			    <div class="progress-button">
+			    	<a href="#"><span class="icon-user"></span></a>
+			    	<span class="progress-button-mask"></span>
+			   	</div>
+			   	<div class="progress-button pull-right">
+			    	<a href="#"><span class="icon-steering-wheel"></span></a>
+			    	<span class="progress-button-mask"></span>
+			   	</div>
+			 </div>
+			<div class="banner-form">
+
+			<div class="slider">
+			  <ul class="slide-wrapper">
+			    <li class="slider-item">
+					<div class="form-l1 step1">
+						<h6 class="form-l1-header relative">
+							<span class="circle color-white">1</span>Pick-up details
+							<!-- <span class="step-status"></span> -->
+						</h6>
+						<div class="form-li-body col-l1">
+							<div class="col2">
+								<div class="form-input-field pull-left">
+									<div class="form-l1-label">
+										Pick up date
+									</div>
+									<div class="relative">
+										<input type="text" id="datepicker" class="form-l1-field has-icon" placeholder="dd/mm/yy" alue="Automatic position">
+										<span class="form-field-icon">
+											<span class="icon-calendar"></span>
+										</span>
+									</div>
+								</div>
+								<div class="form-input-field form-input-field-sm pull-left">
+									<div class="form-l1-label">
+										Pick up Time
+									</div>
+									<div class="relative">
+										<input type="text" class="form-l1-field form-l1-field-sm"  placeholder="12:00" data-timepicker/>	
+										<span class="form-field-icon">
+											<span class="icon-clock"></span>
+										</span>
+									</div>
+								</div>
+																<div class="form-input-field pull-left">
+									<div class="form-l1-label">
+										Return date
+									</div>
+									<div class="relative">
+										<input type="text" id="datepicker1" class="form-l1-field has-icon" placeholder="dd/mm/yy" alue="Automatic position">
+										<span class="form-field-icon">
+											<span class="icon-calendar"></span>
+										</span>
+									</div>
+								</div>
+								<div class="form-input-field form-input-field-sm pull-left">
+									<div class="form-l1-label">
+										Return Time
+									</div>
+									<div class="relative">
+										<input type="text" class="form-l1-field form-l1-field-sm"  placeholder="12:00" data-timepicker/>	
+										<span class="form-field-icon">
+											<span class="icon-clock"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="col2">
+								<div class="form-input-field full-width pr-15">
+									<div class="form-l1-label">
+										Pick up Location
+									</div>
+									<div class="relative">
+										<input type="text" class="form-l1-field form-dropdown"/>	
+										<span class="form-field-icon">
+											<span class="icon-location"></span>
+										</span>
+									</div>
+								</div>
+								<div class="form-input-field full-width pr-15">
+									<div class="form-l1-label">
+										Return Location
+									</div>
+									<div class="relative">
+										<input type="text" class="form-l1-field form-l1-field-sm"/>	
+										<span class="form-field-icon">
+											<span class="icon-location"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			    </li>
+			    <li class="slider-item"><div class="form-l1">
+			    	<div class="form-l1 step2">
+						<h6 class="form-l1-header relative">
+							<span class="circle color-white">2</span>Customer Information
+							<span class="step-status"></span>
+						</h6>
+						<div class="form-li-body col-l1">
+							<div class="col2">
+								<div class="form-input-field pull-left">
+									<div class="form-l1-label">
+										Pick up date
+									</div>
+									<div class="relative">
+										<input type="text" id="datepicker" class="form-l1-field has-icon" placeholder="dd/mm/yy" alue="Automatic position">
+										<span class="form-field-icon">
+											<span class="icon-calendar"></span>
+										</span>
+									</div>
+								</div>
+								<div class="form-input-field form-input-field-sm pull-left">
+									<div class="form-l1-label">
+										Pick up Time
+									</div>
+									<div class="relative">
+										<input type="text" class="form-l1-field form-l1-field-sm"  placeholder="12:00" data-timepicker/>	
+										<span class="form-field-icon">
+											<span class="icon-clock"></span>
+										</span>
+									</div>
+								</div>
+																<div class="form-input-field pull-left">
+									<div class="form-l1-label">
+										Return date
+									</div>
+									<div class="relative">
+										<input type="text" id="datepicker" class="form-l1-field has-icon" placeholder="dd/mm/yy" alue="Automatic position">
+										<span class="form-field-icon">
+											<span class="icon-calendar"></span>
+										</span>
+									</div>
+								</div>
+								<div class="form-input-field form-input-field-sm pull-left">
+									<div class="form-l1-label">
+										Return Time
+									</div>
+									<div class="relative">
+										<input type="text" class="form-l1-field form-l1-field-sm"  placeholder="12:00" data-timepicker/>	
+										<span class="form-field-icon">
+											<span class="icon-clock"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="col2">
+								<div class="form-input-field full-width pr-15">
+									<div class="form-l1-label">
+										Pick up Location
+									</div>
+									<div class="relative">
+										<input type="text" class="form-l1-field"/>	
+										<span class="form-field-icon">
+											<span class="icon-location"></span>
+										</span>
+									</div>
+								</div>
+								<div class="form-input-field full-width pr-15">
+									<div class="form-l1-label">
+										Return Location
+									</div>
+									<div class="relative">
+										<input type="text" class="form-l1-field form-l1-field-sm"  placeholder="12:00" data-timepicker/>	
+										<span class="form-field-icon">
+											<span class="icon-location"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			    </div></li>
+			    <li class="slider-item"><div class="form-l1"></div></li>
+			    <li class="slider-item"><div class="form-l1"></div></li>
+			  </ul>
+			  <ul class="slider-nav">
+			    <li class="slider-button"><a href="#" class="slider-link slider-link-prev">Prev</a></li>
+			    <li class="slider-button"><a href="#" class="slider-link slider-link-next">Next</a></li>
+			  </ul>
+			</div>
+			</div>
+		</div>
+		<img src="img/bg2.jpg" alt="what" class="banner-bg">
+		<img src="img/1.png" alt="Clouds" class="banner-cloud cloud1">
+		<!-- <img src="img/2a.png" alt="Clouds" class="banner-cloud cloud2"> -->
+		<img src="img/3a.png" alt="Clouds" class="banner-cloud cloud3">
+	</section>
+
+	<script src='js/timepicker.js'></script>
+	<script src='js/style.js'></script>
+</body>
+</html>
